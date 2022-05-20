@@ -8,8 +8,5 @@ Note: If the number is a multiple of both 3 and 5, only count it once.
 */
 
 def solution(number)
-  return 0 if number <= 0
-  (1..number-1).to_a
-    .select{|item| item % 3 == 0 || item % 5 == 0 }
-    .reduce(&:+)
+  (1...number).select{|item| item % 3 == 0 || item % 5 == 0 }.reduce(&:+) || 0
 end
