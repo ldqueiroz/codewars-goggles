@@ -15,5 +15,5 @@ The tests will always use some integral number, so don't worry about that in dyn
  */
 
  def is_square(x)
-   (0..x).map{|item| item*item }.include?(x)
+   x >= 0 && Math.sqrt(x) % 1 == 0 
  end
